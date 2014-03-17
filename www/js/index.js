@@ -19,7 +19,11 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        this.bindEvents();
+        var self = this;
+        this.store = new MemoryStore(function() {
+            self.showAlert('Store Initialized', 'Info');
+        });
+        $('.search-key').on('keyup', $.proxy(this.findByName, this));
     },
     // Bind Event Listeners
     //
@@ -27,6 +31,13 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    showAlert: function (message, title) {
+        if (navigator.notification) {
+            navigator.notification.alert(message, null, title, 'OK');
+        } else {
+            alert(title ? (title + ": " + message) : message);
+        }
     },
     // deviceready Event Handler
     //
@@ -46,4 +57,5 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
+
 };
