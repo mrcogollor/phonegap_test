@@ -12,10 +12,10 @@ var HomeView = function() {
 
     this.changePicture = function(event) {
 	    event.preventDefault();
-	    // if (!navigator.camera) {
-	    //     app.showAlert("La camara no funciona", "Error");
-	    //     return;
-	    // }
+	    if (!navigator.camera) {
+	        app.showAlert("La camara no funciona", "Error");
+	        return;
+	    }
 	    var options =   {   quality: 50,
 	                        destinationType: Camera.DestinationType.DATA_URL,
 	                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
