@@ -7,17 +7,9 @@ var app = {
             alert(title ? (title + ": " + message) : message);
         }
     },
-    renderHomeView: function() {
-       $('body').html(this.homeTpl());
-    },
-
-    // initialize: function() {
-    //     this.store = new MemoryStore();
-    //     $('.search-key').on('keyup', $.proxy(this.findByName, this));
-    // }
     initialize: function() {
-        this.homeTpl = Handlebars.compile($("#home-tpl").html());
-        this.renderHomeView();
+        var self = this;
+        $('body').html(new HomeView().render().element)
     }
 };
 
