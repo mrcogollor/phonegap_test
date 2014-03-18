@@ -1,7 +1,8 @@
 var HomeView = function() {
 	
 	this.initializate = function() {
-		this.element = $('<div/>');
+		this.element = $('<div class="content"/>');
+
 		this.element.on('click', '.getCapture', this.changePicture);
 	};
 
@@ -13,7 +14,7 @@ var HomeView = function() {
     this.changePicture = function(event) {
 	    event.preventDefault();
 	    if (!navigator.camera) {
-	        app.showAlert("La cámara no funciona", "Error");
+	        app.showAlert("La camara no funciona", "Error");
 	        return;
 	    }
 	    var options =   {   quality: 50,
