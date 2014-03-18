@@ -14,10 +14,12 @@ body {
 }
 
 .content {
-  width: 110px;
+  width: 170px;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  top: 90%;
+  position: relative;
 }
 
 .header {
@@ -69,7 +71,7 @@ a {
     position: absolute;
     color: #000;
     display: block;
-    padding: 8px;
+    padding: 8px 40px;
     text-decoration: none;
     text-align: center;
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
