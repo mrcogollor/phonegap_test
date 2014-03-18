@@ -13,14 +13,13 @@ var HomeView = function() {
     this.changePicture = function(event) {
 	    event.preventDefault();
 	    if (!navigator.camera) {
-	        app.showAlert("Camera API not supported", "Error");
+	        app.showAlert("La cámara no funciona", "Error");
 	        return;
 	    }
 	    var options =   {   quality: 50,
 	                        destinationType: Camera.DestinationType.DATA_URL,
 	                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
-	                        encodingType: 0,     // 0=JPG 1=PNG
-	                        direction: 1 // 0=back camera 1=front camera
+	                        encodingType: 0     // 0=JPG 1=PNG
 	                    };
 	 
 	    navigator.camera.getPicture(
