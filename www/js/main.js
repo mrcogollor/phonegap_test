@@ -19,11 +19,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        var self = this;
-        this.store = new MemoryStore(function() {
-            self.showAlert('Store Initialized', 'Info');
-        });
-        $('.search-key').on('keyup', $.proxy(this.findByName, this));
+        this.bindEvents();
     },
     // Bind Event Listeners
     //
@@ -50,5 +46,4 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-
 };
