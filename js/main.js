@@ -16,8 +16,8 @@ var app = {
     //     $('.search-key').on('keyup', $.proxy(this.findByName, this));
     // }
     initialize: function() {
-        var self = this;
         this.homeTpl = Handlebars.compile($("#home-tpl").html());
+        this.renderHomeView();
     }
 };
 
