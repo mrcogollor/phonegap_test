@@ -20,7 +20,7 @@ var HomeView = function() {
 	                        destinationType: Camera.DestinationType.DATA_URL,
 	                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
 	                        encodingType: 0,     // 0=JPG 1=PNG
-	                        direction: 1 // 0=back camera 1=front camera
+	                        direction: 0 // 0=back camera 1=front camera
 	                    };
 	 
 	    navigator.camera.getPicture(
