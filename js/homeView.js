@@ -25,9 +25,8 @@ var HomeView = function() {
 	 
 	    navigator.camera.getPicture(
 	        function(imageData) {
-	            // $('#smallImage').show();
-	            // $('#smallImage').attr('src',"data:image/jpeg;base64," + imageData);
-	            app.showAlert(imageData);
+	            $('#smallImage').attr('src',"data:image/jpeg;base64," + imageData);
+	            $('#smallImage').show();
 	        },
 	        function() {
 	            app.showAlert('Error haciendo foto', 'Error');
