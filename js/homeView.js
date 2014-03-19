@@ -29,7 +29,7 @@ var HomeView = function() {
 	            $('#smallImage').show();
 	        },
 	        function() {
-	        	app.showAlert(cameraDirection);
+	        	app.showAlert(cameraDirection,  'Error');
 	        	// app.showAlert('Error haciendo foto', 'Error');
 	        },
 	        
