@@ -21,6 +21,14 @@
         The "device" permission is required for the 'deviceready' event.
     -->
     <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/network"/>
+    <feature name="http://api.phonegap.com/1.0/geolocation"/>
+    <feature name="http://api.phonegap.com/1.0/file"/>
+    <feature name="http://api.phonegap.com/1.0/camera"/>
+    <feature name="http://api.phonegap.com/1.0/media"/>
+    <feature name="http://api.phonegap.com/1.0/device"/>
+
 <!--     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
@@ -28,8 +36,8 @@
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature> -->
 
-    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
-    <plugin name="Camera" value="CDVCamera" />
+  <!--   <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <plugin name="Camera" value="CDVCamera" /> -->
 
 
     <!--
@@ -61,6 +69,10 @@
         <gap:plugin name="Example" />
         A list of available plugins are available at https://build.phonegap.com/docs/plugins
     -->
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+
 
     <!-- Define app icon for each platform. -->
     <icon src="icon.png" />
