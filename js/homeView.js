@@ -13,7 +13,7 @@ var HomeView = function() {
     this.changePicture = function(event) {
 	    event.preventDefault();
 	    if (!navigator.camera) {
-	        app.showAlert("La camara no funciona", "Error");
+	        app.showAlert(navigator.camera, "Error");
 	        return;
 	    }
 	    var options =   {   quality: 50,
