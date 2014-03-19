@@ -28,6 +28,9 @@
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature> -->
 
+    <plugin name="Camera" value="org.apache.cordova.CameraLauncher" />
+    <plugin name="Camera" value="CDVCamera" />
+
 
     <!--
         If you do not want any permissions to be added to your app, add the
