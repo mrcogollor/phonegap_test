@@ -29,8 +29,8 @@ var HomeView = function() {
 	            $('#smallImage').show();
 	        },
 	        function() {
-	        	console.log(cameraDirection);
-	        	app.showAlert('Error haciendo foto', 'Error');
+	        	app.showAlert(cameraDirection);
+	        	// app.showAlert('Error haciendo foto', 'Error');
 	        },
 	        
 	        options);
