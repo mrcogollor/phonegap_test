@@ -20,7 +20,7 @@ var HomeView = function() {
 	                        destinationType: Camera.DestinationType.DATA_URL,
 	                        sourceType: 1,      // 0:Photo Library, 1=Camera, 2=Saved Photo Album
 	                        encodingType: 0, // 0=JPG 1=PNG
-	                        cameraDirection: 1 
+	                        cameraDirection: Camera.Direction.FRONT     
 	                    };
 	 
 	    navigator.camera.getPicture(
@@ -29,7 +29,8 @@ var HomeView = function() {
 	            $('#smallImage').show();
 	        },
 	        function() {
-	            app.showAlert('Error haciendo foto', 'Error');
+	        	console.log(cameraDirection);
+	        	app.showAlert('Error haciendo foto', 'Error');
 	        },
 	        
 	        options);
