@@ -21,7 +21,7 @@
         The "device" permission is required for the 'deviceready' event.
     -->
   
-    <preference name="phonegap-version" value="3.1.0" />
+    <preference name="phonegap-version" value="3.0.0" />
   
     <gap:plugin name="org.apache.cordova.camera" />
     <gap:plugin name="org.apache.cordova.media-capture" />
